@@ -1,0 +1,1161 @@
+[2023-11-06 15:14:38 - _base.py:342 - _invoke_callbacks() -ERROR - exception calling callback for <Future at 0x13700c47450 state=finished returned dict>
+Traceback (most recent call last):
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 57, in on_currency_data_received
+    self.after(0, self.update_conversion_form, currency_dict)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 59, in on_currency_data_received
+    self.update_gui_on_error(e)
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 71, in update_gui_on_error
+    self.update_text(f"Error loading currency data, {error}")
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 74, in update_text
+    self.result_text.config(state='normal')
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1702, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1692, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+RuntimeError: main thread is not in main loop
+[2023-11-06 15:24:08 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 15:24:09 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 15:24:09 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.386927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.386927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.386927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.386927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.386927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.386927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.387949
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.387949
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.387949
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.387949
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.387949
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.387949
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.387949
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.387949
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.387949
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.388956
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.388956
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.388956
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.388956
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.388956
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.388956
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.388956
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.388956
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.389919
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.390941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.391941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.391941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.391941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.391941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.391941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.391941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.391941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.391941
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.392911
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.392911
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.392911
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.392911
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.392911
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.392911
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.392911
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.392911
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.392911
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.393935
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.393935
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.393935
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.393935
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.393935
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.393935
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.393935
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.393935
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.394905
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.394905
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.394905
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.394905
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.394905
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.394905
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.394905
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.394905
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.394905
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.395927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.395927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.395927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.395927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.395927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.395927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.395927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.395927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.395927
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.396934
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.397923
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.398920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.399920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.399920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.399920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.399920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.399920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.399920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.399920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.399920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.399920
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.400903
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.400903
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.400903
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.400903
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.400903
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.400903
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.400903
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.400903
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.401916
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.401916
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.401916
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.401916
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.401916
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.401916
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.401916
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.401916
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.402910
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.402910
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.402910
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.402910
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.402910
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.402910
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.402910
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.403881
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.404878
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.405875
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.406872
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.407870
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.407870
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.407870
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.407870
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.407870
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.407870
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.407870
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.407870
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.408867
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.408867
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06 15:24:09.408867
+[2023-11-06 15:24:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:24:09 - currency_service.py:98 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 15:24:11 - _base.py:342 - _invoke_callbacks() -ERROR - exception calling callback for <Future at 0x197380d0250 state=finished returned dict>
+Traceback (most recent call last):
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 57, in on_currency_data_received
+    self.after(0, self.update_conversion_form, currency_dict)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 59, in on_currency_data_received
+    self.after(0, self.update_gui_on_error, e)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+[2023-11-06 15:33:04 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 15:33:04 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 15:33:04 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 15:33:04 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 15:33:04 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:33:04 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 15:33:07 - _base.py:342 - _invoke_callbacks() -ERROR - exception calling callback for <Future at 0x178ed123f50 state=finished returned dict>
+Traceback (most recent call last):
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 58, in on_currency_data_received
+    self.after(0, self.update_conversion_form, currency_dict)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 60, in on_currency_data_received
+    self.after(0, self.update_gui_on_error, e)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+[2023-11-06 15:35:12 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 15:35:13 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 15:35:13 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 15:35:13 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 15:35:13 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:35:13 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 15:35:15 - _base.py:342 - _invoke_callbacks() -ERROR - exception calling callback for <Future at 0x1a5de8ed990 state=finished returned dict>
+Traceback (most recent call last):
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 52, in on_currency_data_received
+    self.after(0, self.update_conversion_form, currency_dict)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 54, in on_currency_data_received
+    self.after(0, self.update_gui_on_error, e)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+[2023-11-06 15:41:16 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 15:41:17 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 15:41:17 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 15:41:17 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 15:41:17 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:41:17 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 15:41:19 - _base.py:342 - _invoke_callbacks() -ERROR - exception calling callback for <Future at 0x238e87bd7d0 state=finished returned dict>
+Traceback (most recent call last):
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 52, in on_currency_data_received
+    self.after(0, self.update_conversion_form, currency_dict)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 54, in on_currency_data_received
+    self.after(0, self.update_gui_on_error, e)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+[2023-11-06 15:53:05 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 15:53:06 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 15:53:06 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 15:53:06 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 15:53:06 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:53:06 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 15:53:08 - _base.py:342 - _invoke_callbacks() -ERROR - exception calling callback for <Future at 0x1daa8893490 state=finished returned dict>
+Traceback (most recent call last):
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 52, in on_currency_data_received
+    self.after(0, self.update_conversion_form, currency_dict)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 54, in on_currency_data_received
+    self.after(0, self.update_gui_on_error, e)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+[2023-11-06 15:56:14 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 15:56:15 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 15:56:15 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 15:56:15 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 15:56:15 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:56:15 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 15:58:52 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 15:58:53 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 15:58:53 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 15:58:53 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 15:58:53 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 15:58:53 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:00:48 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:00:48 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:00:48 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:00:48 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:00:48 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:00:48 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:02:21 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:02:22 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:02:22 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:02:22 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:02:22 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:02:22 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:03:46 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:03:47 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:03:47 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:03:47 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:03:47 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:03:47 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:04:27 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:04:27 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:04:27 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:04:27 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:04:27 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:04:27 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:04:29 - _base.py:342 - _invoke_callbacks() -ERROR - exception calling callback for <Future at 0x24cad8cc750 state=finished returned dict>
+Traceback (most recent call last):
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 52, in on_currency_data_received
+    self.after(0, self.update_conversion_form, currency_dict)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 54, in on_currency_data_received
+    self.after(0, self.update_gui_on_error, e)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+[2023-11-06 16:12:05 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:12:06 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:12:06 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:12:06 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:12:06 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:12:06 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:12:08 - _base.py:342 - _invoke_callbacks() -ERROR - exception calling callback for <Future at 0x1c052045c10 state=finished returned dict>
+Traceback (most recent call last):
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 52, in on_currency_data_received
+    self.after(0, self.update_conversion_form, currency_dict)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 340, in _invoke_callbacks
+    callback(self)
+  File "C:\Users\cgrac\Documents\python\currency_api\gui\gui.py", line 54, in on_currency_data_received
+    self.after(0, self.update_gui_on_error, e)
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cgrac\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 1584, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop
+[2023-11-06 16:25:33 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:25:34 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:25:34 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:25:34 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:25:34 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:25:34 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:42:47 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:42:47 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:42:47 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:42:47 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:42:47 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:42:47 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:43:48 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:43:49 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:43:49 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:43:49 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:43:49 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:43:49 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:44:21 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:44:21 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:44:21 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:44:21 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:44:21 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:44:21 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:45:42 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:45:43 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:45:43 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:45:43 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:45:43 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:45:43 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:48:07 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:48:08 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:48:08 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:48:08 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:48:08 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:48:08 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:58:41 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:58:42 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:58:42 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:58:42 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:58:42 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:58:42 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 16:58:52 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 16:58:53 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 16:58:53 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 16:58:53 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 16:58:53 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 16:58:53 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:00:07 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:00:08 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:00:08 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:00:08 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:00:08 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:00:08 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:00:13 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:00:14 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:00:14 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:00:14 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:00:14 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:00:14 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:02:15 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:02:16 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:02:16 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:02:16 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:02:16 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:02:16 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:02:27 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:02:27 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:02:27 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:02:27 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:02:27 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:02:27 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:02:45 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:02:45 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:02:45 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:02:45 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:02:45 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:02:45 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:05:55 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:05:55 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:05:55 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:05:55 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:05:55 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:05:55 - currency_service.py:99 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:05:55 - currency_service.py:100 - parse_treasury_response() -INFO - Parsed 165 currencies from 165 countries
+[2023-11-06 17:07:27 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:07:28 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:07:28 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:07:28 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:07:28 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:07:28 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:07:28 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:10:26 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:10:27 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:10:27 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:10:27 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:10:27 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:10:27 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:10:27 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:12:22 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:12:23 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:12:23 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:12:23 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:12:23 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:12:23 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:12:23 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:13:45 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:13:45 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:13:45 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:13:45 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:13:45 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:13:45 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:13:45 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:13:55 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:13:55 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:13:55 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:13:55 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:13:55 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:13:55 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:13:55 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:14:24 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:14:24 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:14:24 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:14:24 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:14:24 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:14:24 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:14:24 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:14:31 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:14:31 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:14:31 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:14:31 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:14:31 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:14:31 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:14:31 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:14:46 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:14:46 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:14:46 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:14:46 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:14:46 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:14:46 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:14:46 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:15:01 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:15:02 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:15:02 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:15:02 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:15:02 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:15:02 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:15:02 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:23:44 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:23:44 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:23:44 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:23:44 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:23:44 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:23:44 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:23:44 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:23:52 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:23:53 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:23:53 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:23:53 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:23:53 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:23:53 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:23:53 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:26:24 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:26:24 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:26:24 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:26:24 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:26:24 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:26:24 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:26:24 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:26:29 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:26:30 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:26:30 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:26:30 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:26:30 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:26:30 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:26:30 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:27:04 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:27:04 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:27:04 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:27:04 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:27:04 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:27:04 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:27:04 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:27:12 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:27:12 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:27:12 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:27:12 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:27:12 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:27:12 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:27:12 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:28:25 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:28:26 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:28:26 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:28:26 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:28:26 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:28:26 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:28:26 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:28:30 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:28:31 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:28:31 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:28:31 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:28:31 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:28:31 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:28:31 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:28:38 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:28:38 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:28:38 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:28:38 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:28:38 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:28:38 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:28:38 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:28:44 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:28:45 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:28:45 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:28:45 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:28:45 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:28:45 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:28:45 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:31:50 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:31:51 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:31:51 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:31:51 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:31:51 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:31:51 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:31:51 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:31:52 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:31:52 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:31:52 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:31:52 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:31:52 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:31:52 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:31:52 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:32:09 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:32:09 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:32:09 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:32:09 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:32:09 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:32:09 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:32:09 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:32:10 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:32:11 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:32:11 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:32:11 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:32:11 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:32:11 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:32:11 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:32:14 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:32:14 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:32:14 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:32:14 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:32:14 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:32:14 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:32:14 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:32:17 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:32:18 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:32:18 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:32:18 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:32:18 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:32:18 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:32:18 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:32:27 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:32:28 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:32:28 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:32:28 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:32:28 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:32:28 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:32:28 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 17:33:29 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 17:33:30 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 17:33:30 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 17:33:30 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 17:33:30 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 17:33:30 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 17:33:30 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 18:04:46 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 18:04:46 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 18:04:46 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 18:04:46 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 18:04:46 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 18:04:46 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 18:04:46 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 18:04:56 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 18:04:57 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 18:04:57 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 18:04:57 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 18:04:57 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 18:04:57 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 18:04:57 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 18:06:03 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 18:06:03 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 18:06:03 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 18:06:03 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 18:06:03 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 18:06:03 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 18:06:03 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-06 18:06:08 - dal.py:17 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-06 18:06:08 - dal.py:22 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-06 18:06:08 - currency_service.py:77 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-06 18:06:08 - currency_service.py:24 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-06
+[2023-11-06 18:06:08 - currency_service.py:40 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-06 18:06:08 - currency_service.py:101 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-06 18:06:08 - currency_service.py:102 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:07:42 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:07:43 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:07:43 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:07:43 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:07:43 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:07:43 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:07:43 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:07:49 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:07:50 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:07:50 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:07:50 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:07:50 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:07:50 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:07:50 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:07:55 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:07:55 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:07:55 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:07:55 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:07:55 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:07:55 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:07:55 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:08:04 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:08:04 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:08:04 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:08:04 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:08:04 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:08:04 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:08:04 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:08:08 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:08:08 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:08:08 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:08:08 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:08:08 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:08:08 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:08:08 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:35:39 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:35:40 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:35:40 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:35:40 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:35:40 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:35:40 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:35:40 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:35:50 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:35:50 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:35:50 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:35:50 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:35:50 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:35:50 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:35:50 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:35:59 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:36:00 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:36:00 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:36:00 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:36:00 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:36:00 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:36:00 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:36:17 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:36:18 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:36:18 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:36:18 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:36:18 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:36:18 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:36:18 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:36:22 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:36:23 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:36:23 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:36:23 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:36:23 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:36:23 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:36:23 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:36:47 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:36:48 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:36:48 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:36:48 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:36:48 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:36:48 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:36:48 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:37:35 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:37:35 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:37:35 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:37:35 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:37:35 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:37:35 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:37:35 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:40:42 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:40:42 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:40:42 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:40:42 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:40:42 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:40:42 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:40:42 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:45:25 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:45:25 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:45:25 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:45:25 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:45:25 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:45:25 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:45:25 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:45:37 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:45:38 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:45:38 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:45:38 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:45:38 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:45:38 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:45:38 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:46:00 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:46:00 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:46:00 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:46:00 - currency_service.py:95 - wrapper() -ERROR - Failed HTTP Response: 403 Client Error: Forbidden for url: https://api.fiscaldata.treasury.gov/services/api/fiscal_service///ffasdfv1/accounting/od/rates_of_exchange?sort=-record_date&format=json&page%5Bnumber%5D=1&page%5Bsize%5D=200
+[2023-11-07 18:46:27 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:46:28 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:46:28 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:46:28 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:46:28 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:46:28 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:46:28 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:46:34 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:46:34 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:46:34 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:46:34 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:46:34 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:46:34 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:46:34 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:47:18 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:47:19 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:47:19 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:47:19 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:47:19 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:47:19 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:47:19 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:47:24 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:47:24 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:47:24 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:47:24 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:47:24 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:47:24 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:47:24 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:47:27 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:47:27 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:47:27 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:47:27 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:47:27 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:47:27 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:47:27 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:47:29 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:47:29 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:47:29 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:47:29 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:47:29 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:47:29 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:47:29 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:48:10 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:48:10 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:48:10 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:48:10 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:48:10 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:48:10 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:48:10 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:48:14 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:48:15 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:48:15 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:48:15 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:48:15 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:48:15 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:48:15 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:48:30 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:48:30 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:48:30 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:48:30 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:48:30 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:48:30 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:48:30 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 18:48:33 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 18:48:34 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 18:48:34 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 18:48:34 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 18:48:34 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 18:48:34 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 18:48:34 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 19:09:59 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 19:10:00 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 19:10:00 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 19:10:00 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 19:10:00 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 19:10:00 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 19:10:00 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
+[2023-11-07 19:10:03 - dal.py:34 - fetch_treasury_data() -INFO - Fetching currency data from the treasury API
+[2023-11-07 19:10:03 - dal.py:42 - fetch_treasury_data() -INFO - Successfully fetched currency data in DAL
+[2023-11-07 19:10:03 - currency_service.py:113 - parse_treasury_response() -INFO - Attempting to parse response from Treasury API
+[2023-11-07 19:10:03 - currency_service.py:46 - find_last_quarter_date() -INFO - Grabbing today's date, 2023-11-07
+[2023-11-07 19:10:03 - currency_service.py:62 - find_last_quarter_date() -INFO - Established last quarter as 2023-09-30
+[2023-11-07 19:10:03 - currency_service.py:137 - parse_treasury_response() -INFO - Successfully parsed API response into currency_dict
+[2023-11-07 19:10:03 - currency_service.py:138 - parse_treasury_response() -INFO - Parsed 169 currencies from 165 countries
